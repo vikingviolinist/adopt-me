@@ -8,6 +8,7 @@ const useBreedList = (animal) => {
   const requestBreeds = useCallback(async () => {
     setBreeds([]);
     setStatus("loading");
+
     const res = await fetch(
       `http://pets-v2.dev-apis.com/breeds?animal=${animal}`
     );
